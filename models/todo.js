@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       console.log("\n");
 
       console.log("Due Today");
+      // FILL IN HERE
       console.log(
         (await Todo.dueToday())
           .map((todo) => todo.displayableString())
@@ -73,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
         { completed: true },
         {
           where: {
-            Id: id,
+            id: id,
           },
         }
       );
